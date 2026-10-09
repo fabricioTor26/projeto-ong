@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastro | Instituto Raiz Viva</title>
+<meta name="description" content="Cadastre-se como voluntário ou apoiador do Instituto Raiz Viva.">
+<meta property="og:title" content="Cadastro | Instituto Raiz Viva">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="site">
+<div class="wrap">
+<a class="brand" href="index.html"><img src="images/logo.svg" alt="" width="40" height="40">Instituto Raiz Viva</a>
+<nav aria-label="Navegação principal">
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="projetos.html">Projetos</a></li>
+<li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="conteudo">
+<div class="wrap">
+<section aria-labelledby="cad">
+<h1 id="cad">Cadastro</h1>
+<p>Preencha seus dados para ser voluntário ou apoiador. Campos com * são obrigatórios.</p>
+<div class="split">
+<div id="mensagem" class="aviso" role="status" aria-live="polite" hidden></div>
+<form action="#" method="post" id="form-cadastro">
+<fieldset>
+<legend>Dados pessoais</legend>
+<label for="nome">Nome completo *</label>
+<input type="text" id="nome" name="nome" required minlength="5" autocomplete="name">
+<label for="email">E-mail *</label>
+<input type="email" id="email" name="email" required autocomplete="email">
+<div class="cols">
+<div><label for="cpf">CPF *</label>
+<input type="text" id="cpf" name="cpf" required inputmode="numeric" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" data-mascara="cpf" maxlength="14"></div>
+<div><label for="nascimento">Data de nascimento *</label>
+<input type="date" id="nascimento" name="nascimento" required max="2008-12-31" autocomplete="bday"></div>
+</div>
+<label for="telefone">Telefone *</label>
+<input type="tel" id="telefone" name="telefone" required inputmode="tel" placeholder="(11) 99999-9999" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" data-mascara="telefone" maxlength="15" autocomplete="tel">
+</fieldset>
+<fieldset>
+<legend>Endereço</legend>
+<label for="endereco">Endereço *</label>
+<input type="text" id="endereco" name="endereco" required autocomplete="street-address">
+<div class="cols">
+<div><label for="cep">CEP *</label>
+<input type="text" id="cep" name="cep" required inputmode="numeric" placeholder="00000-000" pattern="\d{5}-?\d{3}" data-mascara="cep" maxlength="9" autocomplete="postal-code"></div>
+<div><label for="cidade">Cidade *</label>
+<input type="text" id="cidade" name="cidade" required autocomplete="address-level2"></div>
+</div>
+<label for="estado">Estado *</label>
+<select id="estado" name="estado" required>
+<option value="AC">AC</option><option value="AL">AL</option><option value="AP">AP</option><option value="AM">AM</option><option value="BA">BA</option><option value="CE">CE</option><option value="DF">DF</option><option value="ES">ES</option><option value="GO">GO</option><option value="MA">MA</option><option value="MT">MT</option><option value="MS">MS</option><option value="MG">MG</option><option value="PA">PA</option><option value="PB">PB</option><option value="PR">PR</option><option value="PE">PE</option><option value="PI">PI</option><option value="RJ">RJ</option><option value="RN">RN</option><option value="RS">RS</option><option value="RO">RO</option><option value="RR">RR</option><option value="SC">SC</option><option value="SP" selected>SP</option><option value="SE">SE</option><option value="TO">TO</option>
+</select>
+</fieldset>
+<fieldset>
+<legend>Como quer participar?</legend>
+<label><input type="checkbox" name="perfil" value="voluntario" style="width:auto"> Voluntário</label>
+<label><input type="checkbox" name="perfil" value="doador" style="width:auto"> Doador/apoiador</label>
+</fieldset>
+<button class="btn" type="submit">Enviar cadastro</button>
+</form>
+<picture><source srcset="images/educacao.webp" type="image/webp"><img src="images/educacao.jpg" alt="Crianças em oficina ao ar livre, ilustração de colinas e árvores" width="640" height="420" loading="lazy"></picture>
+</div>
+</section>
+</div>
+</main>
+<footer class="site">
+<div class="wrap">
+<p>&copy; 2026 Instituto Raiz Viva &middot; CNPJ 00.000.000/0001-00 (exemplo)</p>
+<p><a href="index.html#contato">Fale conosco</a></p>
+</div>
+</footer>
+<script src="js/mascaras.js" defer></script>
+</body>
+</html>
